@@ -1,0 +1,90 @@
+/* Laboratorium 2 - tworzenie podstawowego arkusza css */
+.galeria img{   
+	border-radius: 13px;
+}
+
+#kontener, #formularz{
+	display: flex;
+}
+#glowny{               /*Określenie stylu części lewej strony Koszyk i Produkty*/
+	width:60%;
+	padding-top: 2%;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-bottom: 3%;
+} 
+#boczny{              /*Określenie stylu części prawej strony Koszyk i Produkty*/
+	width:40%;
+	background-color: #212529;
+	color: #FFFFFF;
+	padding-top: 2%;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-bottom: 3%;
+}
+
+#dane_osobowe{             /*Określenie stylu formularza danych osobowych*/
+	width:40%;
+	margin-right: 9%;
+}
+#adres{                    /*Określenie stylu formularza danych adresowych*/
+	width:60%;
+}
+#platnosc{                 /*Określenie stylu formularza danych platniczych*/
+	margin-top:8%;
+	margin-bottom:5%;
+}
+
+#koszyk,#zamowienie{     /*Określenie stylu części lewej strony Koszyk */
+	margin-bottom: 5%;
+}
+
+
+.niewidzialna td:first-child{  /*Określenie stylu tabeli bez widocznych obramowań*/
+	width: 55%;
+}
+.niewidzialna td:nth-child(2){
+	width: 15%;
+}
+.niewidzialna1 td:first-child{
+	width: 50%;
+}
+.widzialna td{                  /*Określenie stylu tabeli z widocznymi obramowaniami*/
+	border: solid 1px black;
+	text-align: center;
+}
+.widzialna td:first-child{
+	width: 55%;
+}
+.widzialna td:nth-child(2){
+	width: 10%;
+}
+.widzialna td:nth-child(3){
+	width: 15%;
+}
+
+.lokalizacja{
+	margin-left: 3%;
+	margin-bottom: 3%;
+}
+
+ /* Laboratorium 5 - responsywna galeria w zależności od szerokości ekranu*/
+ @media screen and (min-width: 721px){
+	.galeria img{
+		margin: 30px;
+	}
+}
+
+@media screen and (min-width: 482px) and (max-width: 720px) {
+	.galeria img{
+		margin: 15px;
+	}
+
+}
+
+ @media screen and (max-width: 481px){
+	.galeria img{
+		margin:7px auto;
+		display:block;
+	}
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pl">
+ <head>
+ <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Kwiaciarnia</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+		<link rel="stylesheet" href="CSS/style.css" /> <!-- mój plik ze stylami oraz oznaczeniami Laboratoriów-->
+	    <script src="JS/funkcje.js"></script>  <!-- mój plik ze wszystkimi skryptami w javascript oraz SPA oraz oznaczeniami Laboratoriów-->
+		<script src="JS/scripts.js"></script>  
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- dodanie biblioteki jquery-->
+		<script src="JS/lightbox.js"></script> <!-- dołączenie wtyczki lightbox -->
+		<link rel="stylesheet" href="CSS/lightbox.css" />  <!-- oraz arkusza lightbox -->
+		<script src="https://maps.google.com/maps/api/js?sensor=false" ></script> <!-- dodanie skryptu do mapy google-->
+ </head>
+ <body class="d-flex flex-column h-100">  <!-- Laboratorium 10 - strona główna w bootstrap oraz bootstrao carusel-->
+        <main class="flex-shrink-0">
+		<!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container px-5">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" onclick="pokaz(1)">Strona główna</a></li> <!-- Laboratorium 7 -aplikacja typu SPA w javascript (onclick pokaz)-->
+                            <li class="nav-item"><a class="nav-link" onclick="pokaz(2)">Produkty</a></li>
+                            <li class="nav-item"><a class="nav-link" onclick="pokaz(3)">Koszyk</a></li>
+                            <li class="nav-item"><a class="nav-link" onclick="pokaz(4)">Galeria</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+			
+ <section id="blok">
+ 
+		<header class="bg-dark py-5">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center justify-content-center">
+                        <div class="col-lg-8 col-xl-7 col-xxl-6">
+                            <div class="my-5 text-center text-xl-start">
+                                <h1 class="display-5 fw-bolder text-white mb-2">Kwiaciarnia "Tulipan"</h1>
+                                <p class="lead fw-normal text-white-50 mb-4">Nasza kwiaciarnia powstała w 2015r. Od tamtego czasu grono naszych klientów stale się powiększa i znalazły się w nim takie osobistości jak Damian Podsiadło czy Maria Rodowicz. Kwiaty to nasza pasja.</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
+						<div id="przykladowaKaruzela" class="carousel slide" data-ride="carousel">  <!-- Dodanie kodu ze strony podanej w laboratoriach-->
+					  <div class="carousel-inner">
+						<div class="carousel-item active">
+						  <img  style="height: 427px" class="d-block w-100" src="zdjecie4.jpg" alt="Pierwszy slajd">
+						</div>
+						<div class="carousel-item">
+						  <img  style="height: 427px" class="d-block w-100" src="zdjecie2.jpg" alt="Drugi slajd">
+						</div>
+						<div class="carousel-item">
+						  <img  style="height: 427px" class="d-block w-100" src="zdjecie3.jpg" alt="Trzeci slajd">
+						</div>
+						<div class="carousel-item">
+						  <img  style="height: 427px" class="d-block w-100" src="zdjecie1.jpg" alt="Czwarty slajd">
+						</div>
+						<div class="carousel-item">
+						  <img  style="height: 427px" class="d-block w-100" src="zdjecie5.jpg" alt="Piąty slajd">
+						</div>
+					  </div>
+					</div>
+					</div>
+                    </div>
+                </div>
+            </header>
+            <!-- Features section-->
+            <section class="py-5" id="features">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5">
+                        <div class="col-lg-4 mb-5 mb-lg-0"><h2 class="fw-bolder mb-0">Zapewniamy</h2></div>
+                        <div class="col-lg-8">
+                            <div class="row gx-5 row-cols-1 row-cols-md-2">
+                                <div class="col mb-5 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
+                                    <h2 class="h5">Szybka i wygodna dostawa</h2>
+                                    <p class="mb-0">Nasi dostawcy pracują od poniedziałku do soboty w godzinach 9:00 - 19:00. Istnieje możliwość zmiany czasu dostawy w zależności od preferencji klienta.</p>
+                                </div>
+                                <div class="col mb-5 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
+                                    <h2 class="h5">Bezpieczeństwo</h2>
+                                    <p class="mb-0">Nasza kwiaciarnia zachowuje wszystkie niezbędne wymogi sanitarne, dlatego bukiety dla naszych klientów sa w pełni bezpieczne.</p>
+                                </div>
+                                <div class="col mb-5 mb-md-0 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                                    <h2 class="h5">Szeroki wybór produktów</h2>
+                                    <p class="mb-0">Nasza kwiaciarnia zapewnia szeroki wybór dostępnych kwiatów. Możliwe są subskrypcje naszych bukietów oraz większe zamówienia po ustaleniu szczegółów z właścicielem</p>
+                                </div>
+                                <div class="col h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                                    <h2 class="h5">Kwiaty na każdą okazję</h2>
+                                    <p class="mb-0">Szukasz bukietu na dzień kobiet? Czy może chciałbyś skomponować bukiet dla mamy na dzień matki? A może potrzebujesz kwiatów do udekorowania sali weselnej? Zapewniamy wszystkie te usługi, a nawet wiele więcej.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Testimonial section-->
+            <div class="py-5 bg-light">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-10 col-xl-7">
+                            <div class="text-center">
+                                <div class="fs-4 mb-4 fst-italic">"Potrzebowałem natychmiast bukietu na rocznicę ślubu, ta kwiaciarnia od razu zrealizowała moje zamówienie i już na następny dzień bukiet znalazł się u mojej żony w wazonie. Serdecznie ją polecam!"</div>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
+                                    <div class="fw-bold">
+                                        Dariusz Podsiadło
+                                        <span class="fw-bold text-primary mx-1">/</span>
+                                        Kraków
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ 
+ </section>
+ </main>
+ <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container px-4 px-lg-5"><p class="m-0 text-center text-white">Copyright &copy; BP 2020</p></div> <!-- Zmieniona stopka-->
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>  <!-- Dodanie potrzebnych skryptów-->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ </body>
+</html>
