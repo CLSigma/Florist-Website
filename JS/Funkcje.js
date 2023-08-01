@@ -10,7 +10,7 @@ function pokaz(id)
  //pobierz element o wskazanym id i ustaw jego nową zawartość:
  document.getElementById('blok').innerHTML = tresc;
 }
-function pokazO(){  //Laboratorium 10 - responsywny szablon strony w bootstrap oraz bootstrap carusel
+function pokazO(){ 
  var tresc ='<header class="bg-dark py-5">';
  tresc +='<div class="container px-5">';
  tresc +='<div class="row gx-5 align-items-center justify-content-center">';
@@ -98,11 +98,11 @@ function pokazO(){  //Laboratorium 10 - responsywny szablon strony w bootstrap o
  //przekaż wynik – gotową zawartość – do miejsca wywołania funkcji:
  return tresc;
 }
-function pokazGalerie() //Laboratorium 3 - tworzenie galerii zdjęć
+function pokazGalerie() 
 {
  var tresc='';
  tresc+='</br><h1 style="margin-left:2%;">Galeria naszych produktów</h1></br>';
- tresc+=' <div class="galeria">';  //Laboratorium 9 - galeria z wykorzystaniem jQuery lightbox
+ tresc+=' <div class="galeria">';
  tresc+='<a href="zdjecia/obraz1.jpg" target="_blank" data-lightbox="galeria" data-title="Róże"><img src="miniaturki/obraz1.jpg" alt="Róże" class="zdjecie"></a>  <!-- dodanie do zdjęcia tytułu oraz lightboxa -->';
  tresc+='<a href="zdjecia/obraz2.jpg" target="_blank" data-lightbox="galeria" data-title="Goździki"><img src="miniaturki/obraz2.jpg" alt="Goździki" class="zdjecie"></a>  <!-- dodanie do zdjęcia tytułu oraz lightboxa -->';
  tresc+='<a href="zdjecia/obraz3.jpg" target="_blank" data-lightbox="galeria" data-title="Anthurium"><img src="miniaturki/obraz3.jpg" alt="Anthurium" class="zdjecie"></a>  <!-- dodanie do zdjęcia tytułu oraz lightboxa -->';
@@ -117,7 +117,7 @@ function pokazGalerie() //Laboratorium 3 - tworzenie galerii zdjęć
  tresc+='<a href="zdjecia/obraz12.jpg" target="_blank" data-lightbox="galeria" data-title="Żonkile"><img src="miniaturki/obraz12.jpg" alt="Żonkile" class="zdjecie"></a>  <!-- dodanie do zdjęcia tytułu oraz lightboxa -->';
  tresc+='<a href="zdjecia/obraz13.jpg" target="_blank" data-lightbox="galeria" data-title="Frezje"><img src="miniaturki/obraz13.jpg" alt="Frezje" class="zdjecie"></a> <!-- dodanie do zdjęcia tytułu oraz lightboxa -->';
  tresc+='</div>';
- tresc+='</br></br><div class="lokalizacja"><h4>Dodatkowe informacje</h4></br>'+  //Laboratorium 11 część 2 - geolokalizacja
+ tresc+='</br></br><div class="lokalizacja"><h4>Dodatkowe informacje</h4></br>'+  
  'Twoja geolokalizacja to:</p>'+
  '<div id="geo">'+
  '<p><button onclick="getLocation()">Pokaż lokalizację</button></p>'+
@@ -130,8 +130,8 @@ function pokazProdukty()
 {
  var tresc='';
  //uzupełnij treść:
- tresc+= '<div id="kontener">'+                 //Laboratorium 1 część 1- tworzenie podstawowej strony w html, tworzenie tabeli
- '<div id="glowny"><h1>Nasze produkty</h1></br>'+   //Laboratorium 3 - tworzenie ukłądu dwukolumnowego
+ tresc+= '<div id="kontener">'+               
+ '<div id="glowny"><h1>Nasze produkty</h1></br>'+   
  'Zdjęcia produktów można zobaczyć w galerii</br></br>'+
  '<table class ="niewidzialna">'+
  '<tr><td>Róże</td><td>6,99 zł</td><td><input type="number" id="ilosc1" min="1" max="25"></input></td><td><button type="button" onClick="zapisz(1)">Dodaj</button></td></tr>'+
@@ -149,9 +149,9 @@ function pokazProdukty()
  '<tr><td>Frezje</td><td>8,99 zł</td><td><input type="number" id="ilosc13" min="1" max="5"></input></td><td><button type="button" onClick="zapisz(13)">Dodaj</button></td></tr>'+
  '</table>'+
  '</div>'+
- '<div id="boczny"><h2>Jakie kwiaty najlepiej kupić na prezent?</h2></br>'+ //Laboratorium 3 - tworzenie ukłądu dwukolumnowego
- 'Wypełnij formularz, a my odeślemy nasze propozycje</br></br>'+ //Laboratorium 1 część 2- tworzenie  przykładowego formularza
- '<form method="post" action="mailto:przykladowy_email@pollub.edu.pl" onsubmit="return sprawdz()" >'+ //Laboratorium 8 - walidacja formularza w javascript
+ '<div id="boczny"><h2>Jakie kwiaty najlepiej kupić na prezent?</h2></br>'+ 
+ 'Wypełnij formularz, a my odeślemy nasze propozycje</br></br>'+ 
+ '<form method="post" action="mailto:przykladowy_email@pollub.edu.pl" onsubmit="return sprawdz()" >'+ 
  '<table>'+
  '<tr><td>Imie</td><td><input name="imie" size="20" id="imie"></td><td id="imie_error" style="color:red;"></td></tr>'+
  '<tr><td>Wiek</td><td><input name="wiek" size="20" id="wiek"/></td><td id="wiek_error" style="color:red;"></td></tr>'+
@@ -182,10 +182,10 @@ function pokazKoszyk()
 {
  var tresc='';
  tresc+= '<div id="kontener">'+ 
- '<div id="glowny"><h1>Twój koszyk</h1></br></br>'+ //Laboratorium 1 część 1- tworzenie podstawowej strony w html //Laboratorium 3 - tworzenie ukłądu dwukolumnowego
+ '<div id="glowny"><h1>Twój koszyk</h1></br></br>'+ 
  '<div id="koszyk">';
  var suma_calosc = 0;
-	if(sessionStorage.length==0){  //Laboratorium 11 - Budowa aplikacji wykorzystującej lokalne magazyny danych, w moim przypadku sessionstorage
+	if(sessionStorage.length==0){  
 		tresc+='<h2>Koszyk jest pusty</h2>';
 		suma_calosc = 0;
 	}
@@ -203,9 +203,9 @@ function pokazKoszyk()
 
  tresc+='</div><div id="zamowienie">'+
  '</br></br><h3>Złóż zamówienie</h3></br></br>'+
- '<form action="mailto:przykladowy_email@gmail.com" method="post">'+ //Laboratorium 1 część 2- tworzenie  przykładowego formularza
+ '<form action="mailto:przykladowy_email@gmail.com" method="post">'+ 
  '<div id="formularz">'+
- '<div id="dane_osobowe">'+  //Laboratorium 4- walidacja  przykładowego formularza w html
+ '<div id="dane_osobowe">'+  
  '<fieldset><legend><h5>Dane osobowe</h5></legend></br>'+
  '<table class ="niewidzialna1">'+
  '<tr><td>Imie</td><td><input type="text" name="imie" pattern="[A-Za-ząćęłńóśźżĄĘŁŃÓŚŹŻ\x20]{1,}" required></td></tr>'+
@@ -237,8 +237,8 @@ function pokazKoszyk()
  '<input type="reset" value="Wyczyść">'+
  '</form></div>'+
  '</div>'+
- '<div id="boczny"><h2>Czy chcesz zamówić subskrypcję skomponowanego bukietu?</h2></br></br>'+ //Laboratorium 3 - tworzenie ukłądu dwukolumnowego
- 'Istnieje możliwość edytowania zawartości bukietu w trakcie trwania subskrypcji.</br></br>'; //Laboratorium 6- prosty kalkulator sumy całkowitej z rabatami w javascript
+ '<div id="boczny"><h2>Czy chcesz zamówić subskrypcję skomponowanego bukietu?</h2></br></br>'+
+ 'Istnieje możliwość edytowania zawartości bukietu w trakcie trwania subskrypcji.</br></br>';
  tresc+='Cena za miesiąc: '+suma_calosc+' zł </br>';
  var suma_rabat=(suma_calosc-(suma_calosc*0.1)).toFixed(2);
  tresc+='Cena za miesiąc przy subskrypcji 6 misięcy (rabat 10%): '+suma_rabat+' zł </br>';
@@ -250,7 +250,7 @@ function pokazKoszyk()
  return tresc;
 }
 
-function zaktualizujKoszyk(){  //Laboratorium 11 - aktualizacja wyglądu koszyka oraz części z subskrypcjami po zmianach w koszyku
+function zaktualizujKoszyk(){  
 	var tresc = '';
 	if(sessionStorage.length==0){
 		tresc+='<h2>Koszyk jest pusty</h2>';
@@ -282,7 +282,7 @@ function zaktualizujKoszyk(){  //Laboratorium 11 - aktualizacja wyglądu koszyka
 	document.getElementById('boczny').innerHTML = tresc;
 }
 
-function zapisz(id){ //Laboratorium 11 - funkcja odpowiadająca za zapis ilości sztuk danego produktu w sessionstorage
+function zapisz(id){  
  switch (id){ 
  case 1: 
 	var nazwa= "Róże";
@@ -346,7 +346,7 @@ function zapisz(id){ //Laboratorium 11 - funkcja odpowiadająca za zapis ilości
 	}
 }
 
-function pokazCene(id){ //Laboratorium 6- prosty kalkulator sumy  w javascript  
+function pokazCene(id){ 
 	switch (sessionStorage.key(id)){
  case "Róże": 
 	var cena= 6.99;
@@ -389,17 +389,17 @@ function pokazCene(id){ //Laboratorium 6- prosty kalkulator sumy  w javascript
 	break;
 	}
 	
-	var suma= cena*sessionStorage.getItem(sessionStorage.key(id)); // Laboratorium 11 - wykorzystanie klucza i wartości klucza z sessionstorage do obliczenia ceny w koszyku
+	var suma= cena*sessionStorage.getItem(sessionStorage.key(id)); 
 	return suma;
 	
 }
 
-function usun_wszystko(id){ // Laboratorium 11 -usuwanie wszystkich sztuk artykułu z koszyka
+function usun_wszystko(id){ 
 	sessionStorage.removeItem(sessionStorage.key(id));
 	zaktualizujKoszyk();
 }
 
-function usun(id){ // Laboratorium 11 -usuwanie jednej sztuki artykułu z koszyka
+function usun(id){ 
 	if(sessionStorage.getItem(sessionStorage.key(id))==1){
 		sessionStorage.removeItem(sessionStorage.key(id));
 	}
@@ -410,7 +410,7 @@ function usun(id){ // Laboratorium 11 -usuwanie jednej sztuki artykułu z koszyk
 }
 
 
-function sprawdzPole(pole_id,obiektRegex) {    //Laboratorium 8 - funkcja potrzebna do walidacji pola w javascript
+function sprawdzPole(pole_id,obiektRegex) {    
 //Funkcja sprawdza czy wartość wprowadzona do pola tekstowego
 //pasuje do wzorca zdefiniowanego za pomocą wyrażenia regularnego
 //Parametry funkcji:
@@ -434,7 +434,7 @@ var obiekt=document.getElementsByName(nazwa_radio);
  return wybrany;
 }
 
-function sprawdz_box(nazwa_box) //Laboratorium 8 - funkcja potrzebna do walidacji checkbox w javascript
+function sprawdz_box(nazwa_box) 
 {//Funkcja sprawdza ktory przycisk typu checkbox
 //z grupy przycisków o nazwie nazwa_box jest zaznaczony
 //sprawdzam od razu wszystkie przyciski
@@ -452,7 +452,7 @@ else
 	return wybrany; //jeśli zmieniła to funkcja zwraca wartość zaznaczonych checkboxów
 }
 
-function sprawdz() //Laboratorium 8 - walidacja formularza w javascript
+function sprawdz() 
 { //Funkcja realizujaca sprawdzanie całego fomularza
 //wykorzystując funkcje pomocnicze
 //--------------------------------
@@ -516,7 +516,7 @@ var ktore_radio = sprawdz_radio("kolor"); //ze względu na defult zaznaczenie je
 
 }
 
-function showLocation(position) { //Laboratorium 11 część 2 -  pokazanie geolokalizacji i mapy
+function showLocation(position) { 
  var latitude = position.coords.latitude;
  var longitude = position.coords.longitude;
  var output = document.getElementById("geo");
@@ -531,7 +531,7 @@ function showLocation(position) { //Laboratorium 11 część 2 -  pokazanie geol
  output.innerHTML = 'Szerokość geograficzna: ' + latitude + '</br>Długość geograficzna: ' + longitude;
  }
  
-function errorHandler(error) {   //Laboratorium 11 część 2 -  pokazanie komunikatu przy błędzie lokalizacji
+function errorHandler(error) {   
  var output = document.getElementById("geo");
  switch (error.code) {
  case error.PERMISSION_DENIED:
