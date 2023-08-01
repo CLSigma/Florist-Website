@@ -6,14 +6,14 @@
 #kontener, #formularz{
 	display: flex;
 }
-#glowny{               /*Określenie stylu części lewej strony Koszyk i Produkty*/
+#glowny{               
 	width:60%;
 	padding-top: 2%;
 	padding-left: 5%;
 	padding-right: 5%;
 	padding-bottom: 3%;
 } 
-#boczny{              /*Określenie stylu części prawej strony Koszyk i Produkty*/
+#boczny{              
 	width:40%;
 	background-color: #212529;
 	color: #FFFFFF;
@@ -23,24 +23,24 @@
 	padding-bottom: 3%;
 }
 
-#dane_osobowe{             /*Określenie stylu formularza danych osobowych*/
+#dane_osobowe{             
 	width:40%;
 	margin-right: 9%;
 }
-#adres{                    /*Określenie stylu formularza danych adresowych*/
+#adres{                    
 	width:60%;
 }
-#platnosc{                 /*Określenie stylu formularza danych platniczych*/
+#platnosc{                
 	margin-top:8%;
 	margin-bottom:5%;
 }
 
-#koszyk,#zamowienie{     /*Określenie stylu części lewej strony Koszyk */
+#koszyk,#zamowienie{    
 	margin-bottom: 5%;
 }
 
 
-.niewidzialna td:first-child{  /*Określenie stylu tabeli bez widocznych obramowań*/
+.niewidzialna td:first-child{  
 	width: 55%;
 }
 .niewidzialna td:nth-child(2){
@@ -49,7 +49,7 @@
 .niewidzialna1 td:first-child{
 	width: 50%;
 }
-.widzialna td{                  /*Określenie stylu tabeli z widocznymi obramowaniami*/
+.widzialna td{                  
 	border: solid 1px black;
 	text-align: center;
 }
@@ -68,7 +68,7 @@
 	margin-bottom: 3%;
 }
 
- /* Laboratorium 5 - responsywna galeria w zależności od szerokości ekranu*/
+
  @media screen and (min-width: 721px){
 	.galeria img{
 		margin: 30px;
